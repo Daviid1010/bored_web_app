@@ -1,0 +1,177 @@
+<!DOCTYPE htm>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<style>
+    
+* {
+    box-sizing: border-box;
+}
+
+.center{
+    width:80%;
+    margin:auto;
+     min-height: 250px; 
+}
+.center:after{
+    content: "";
+     display: table;
+    clear: both;
+}
+.about {
+   float: left;
+    width: 20%;
+    padding: 8.5px;
+    height: 250px; 
+}
+
+.aboutLogo {
+    margin:auto;
+    width: 20%;
+    height: 300px; 
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+    
+}
+</style>
+<head>    
+<!--<meta name="viewport" content="width=device-width, initial-scale=1, iser-scalable=no"/>-->
+
+    <title>
+        Bored.ie
+    </title>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- This is the new code for the navbar, instead of using a nav tag I used my own css and javascript, the old code is commentted out above-->
+    <div class="topnav" id="myTopnav">
+        <a href="main.html" class="dropmenu">Home</a>
+        <a href="contact.html" class="dropmenu">Contact</a>
+        <a href="about.html" class="active">About</a>
+        <a href="javascript:void(0)" class="icon" onclick="myFunction()">&#9776;</a>
+        <a href="index.html" class="dropmenu" style="float:right">Login</a>
+    </div>
+    <!--<div class="topnav" id="loginBtn">
+        <a href="login.html" class="dropmenu">Login</a>
+    </div>-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+
+<h2 align="center">About Us</h2>
+
+
+<style>
+    .container {
+        border: 2px solid #dedede;
+        background-color: #e91e63;
+        border-radius: 5px;
+        padding: 10px;
+        margin: 10px 0;
+        height: 9%;
+        width: 25%;
+
+    }
+
+    .darker {
+        border-color: #ccc;
+        background-color: #00316b;
+    }
+
+    .container::after {
+        content: "";
+        clear: both;
+        display: table;
+
+
+    }
+
+    .container img {
+        float: left;
+        max-width: 60px;
+        width: 100%;
+        margin-right: 20px;
+        border-radius: 50%;
+    }
+
+    .container img.right {
+        float: right;
+        margin-left: 20px;
+        margin-right: 0;
+    }
+
+    .time-right {
+        float: right;
+        color: #aaa;
+    }
+
+    .time-left {
+        float: left;
+        color: #999;
+    }
+
+    .container p {
+        color: #ffffff;
+    }
+</style>
+<div class="center" style="float:left;padding-left:10%;">
+        <h2 style="width:50%">Bored.ie is a recently formed company that is aimed to meet the needs of students, in relation to past-times.</h2>
+        <h2 style="width:50%"> The Company was created in order to give students a highly useful web application that they can interact with.</h2>
+        <h2 style="width:50%">It is useful for more than just students, but the general public.</h2>
+    </div>
+    <div class="aboutLogo">
+        <div><img src="/images/Logo Transparent.png" alt="Avatar" style="width:100%;"></div>
+    </div>
+<div id="wrap" align="right">
+    <div id="chat"><!--<iframe align="left" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2381.6893219782723!2d-6.245367984161475!3d53.34881737997951!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48670e8cd86e97e7%3A0x6d51b774ee7fa935!2sNational+College+of+Ireland!5e0!3m2!1sen!2sie!4v1512390944826"width="500" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>
+ -->       <h2>Chat Messages</h2>
+        <div class="container darker"><img src="/images/megan.jpg" alt="Avatar" class="right" style="width:100%;">
+            <p>Hey, fancy doing something over the weekend?</p><span class="time-right">11:00</span></div>
+        <div class="container"><img src="/images/lauren.jpg" alt="Avatar" style="width:100%;">
+            <p>We can see whats on bored.ie?</p><span class="time-left">11:02</span></div>
+        <div class="container darker"><img src="/images/megan.jpg" alt="Avatar" class="right" style="width:100%;">
+            <p>Whats that?</p><span class="time-right">11:04</span></div>
+        <div class="container"><img src="/images/lauren.jpg" alt="Avatar" style="width:100%;">
+            <p>Its an app, just throw in your budget and location and it will give us a list of things we can afford to do near us!</p><span class="time-left">11:05</span></div>
+        <div class="container darker"><img src="/images/megan.jpg" alt="Avatar" class="right" style="width:100%;">
+            <p>What?! That sounds unreal! Yeah we'll see whats on!</p>
+            <span class="time-right">11:07</span></div>
+    </div>
+</div>
+<h3 align="center">Our Team</h2>
+<div class="center">
+    <div class="about" style="background-color:#e9e8ed;">
+        <p><img src="/images/lauren.jpg" alt="Avatar" style="width:40%;"></p>
+        <h2>Lauren Bannon</h2>
+        <p>Chief Executive Officer (CEO)</p>
+    </div>
+    <div class="about" style="background-color:#bbb;">
+        <p><img src="/images/megan.jpg" alt="Avatar" style="width:40%;"></p>
+        <h2>Megan Peters</h2>
+        <p>Chief Financial Officer (CFO)</p>
+    </div>
+    <div class="about" style="background-color:#e9e8ed;">
+        <p><img src="/images/adam.jpg" alt="Avatar" style="width:40%;"></p>
+        <h2>Adam Freeman</h2>
+        <p>Chief Marketing Officer (CMO)</p>
+    </div>
+    <div class="about" style="background-color:#aaa;">
+        <p><img src="/images/kellie.jpg" alt="Avatar" style="width:40%;"></p>
+        <h2>Kellie Gregan</h2>
+        <p>Chief Operating Officer (COO)</p>
+    </div>
+    <div class="about" style="background-color:#e9e8ed;">
+        <p><img src="/images/david.jpg" alt="Avatar" style="width:40%;"></p>
+        <h2>David Sheehy</h2>
+        <p>Chief Technical Officer (CTO)</p>
+    </div>
+</div>
+</body>
+
+</html>

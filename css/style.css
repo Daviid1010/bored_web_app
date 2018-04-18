@@ -1,0 +1,801 @@
+body{
+    margin:0;
+    padding:0;
+    font-family: 'Hi Melody';
+    /*margin-right: 50;*/ /*left space on side of two pages so tested without this piece of code adn it allowed the page to fill the space*/
+}
+
+
+ul{
+    width: 100%;
+    margin: 0 auto;
+    padding:0;
+}
+ul li{
+    list-style: none;
+    display:inline-block;
+    padding:20px;
+    transition-duration: 0.2s;
+}
+
+ul li:hover{
+    background:#e91e63;
+}
+
+ul li a{
+    color: #fff;
+    text-decoration: none;
+}
+
+
+h1 {
+    color: #4b32bc;
+    text-align: center;
+ }
+
+.toggle{
+    width: 100%;
+    padding:10px 20px;
+    background:#001f44;
+    text-align: right;
+    box-sizing: border-box;
+    color: #fff;
+    font-size: 30px;
+    display: none;
+}
+
+@media (max-width:768px){
+    .toggle{
+        display: block;
+    }
+    ul{
+        width: 100%;
+        display: none;
+    }
+    ul li{
+        display: block;
+        text-align: center;
+    }
+    .active{
+        display: block;
+    }
+}
+
+#about {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+
+#map {
+    width: 65%;
+    height: 850px;
+    background-color: grey;
+    margin-left: auto;
+    margin-right: 10px;
+}
+
+#sliders {
+    height: 850px;
+    width: 30%;
+    margin: 0 auto;
+    margin-left: 5px;
+    float: left;
+    padding-left: 15px;
+    border: solid;
+    border-color: #00316b;
+
+}
+
+.slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 90%;
+    height: 25px;
+    background: #001f44;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    margin-right: 35%;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #e91e63;
+    cursor: pointer;
+}
+
+
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #e91e63;
+    cursor: pointer;
+    color: #e91e63;
+}
+
+
+h3 {
+    padding-left: 10px;
+    text-decoration: underline;
+    color: #00316b;
+}
+
+select {
+    margin: 10px;
+    color: #00316b;
+    height: 50px;
+    width: 80%;
+}
+
+#searchBtn {
+    height: 50px;
+    width: 200px;
+    margin-left: 10px;
+    background-color:#00316b;
+    color: white;
+    transition-duration: 0.2s;
+}
+
+#searchBtn:hover {
+  background-color:#e91e63; 
+}
+
+#submitBtn {
+    height: 50px;
+    width: 200px;
+    margin-left: 10px;
+    background-color:#00316b;
+    color: white;
+    transition-duration: 0.2s;
+}
+
+#submitBtn:hover {
+  background-color:#e91e63; 
+}
+
+#submitBtn {
+    height: 50px;
+    width: 200px;
+    margin-left: 10px;
+    background-color:#00316b;
+    color: white;
+    transition-duration: 0.2s;
+}
+
+#submitBtn:hover {
+  background-color:#e91e63;  
+}
+
+@media (max-width: 750px) {
+    #sliders {
+        width: 100%;
+        margin-bottom: 5px;
+        background-color: white;
+    }
+    #map {
+        width: 100%;
+    }
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+    /*background-color: #00316b;*/
+    background-color:#4b32bc;
+    overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 14px 16px;
+    font-size: 17px;
+    text-decoration: none;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: #e91e63;
+    color: #fff;
+}
+
+/* Add an active class to highlight the current page */
+.active {
+    /*background-color: #e91e63;*/
+    background-color:#00316b;
+    color: #fff;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+    display: none;
+}
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+  .topnavresponsive {position: relative;}
+  .topnavresponsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnavresponsive a {
+    float: none;
+    display: block;
+    text-align: left;
+    padding: 14px 16px;
+    font-size: 17px;
+    text-decoration: none;
+  }
+  
+  .topnavresponsive a #loginBtn {
+      float: none;
+  }
+  
+ .dropmenu {
+      background-color: #00316b;
+      color: white;
+  }
+  
+  .dropmenu:hover {
+      background-color: #e91e63;
+  }
+  
+  .wrap{
+    float:left;
+    margin:auto;
+    margin-bottom:50px;
+    margin-top:10px;
+    width:30%;
+  }
+ .chat{
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 0 20px;
+    /*h:*/
+ }
+}
+/* * {
+    box-sizing: border-box;
+}
+
+
+.about {
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+    height: 300px; 
+}
+
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}*/
+
+/*adams css*/
+* {
+    box-sizing: border-box;
+}
+
+.main {
+    background-color: #ddd;
+}
+
+.left {
+
+    display: table-cell;
+}
+
+.middle {
+
+    display: table-cell;
+    width: 100%;
+}
+
+.right {
+
+    display: table-cell;
+}
+
+.adleft {
+    border: 2px solid #00316b;
+    display: table-cell;
+
+}
+
+.admiddle {
+
+    display: table-cell;
+    width: 100%;
+
+}
+
+.adright {
+    border: 2px solid #00316b;
+    display: table-cell;
+
+}
+
+.center {
+    width: 80%;
+    margin: auto;
+    min-height: 250px;
+}
+
+.center:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.about {
+    float: left;
+    width: 20%;
+    padding: 8.5px;
+    height: 250px;
+}
+
+.about2 {
+    float: left;
+    width: 50%;
+    padding: 8.5px;
+    height: 35%;
+    padding-left: 30%;
+}
+
+.aboutLogo {
+    margin: auto;
+    width: 20%;
+    height: 300px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+
+}
+
+.container {
+    border: 2px solid #dedede;
+    background-color: #e91e63;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+    height: 9%;
+    width: 25%;
+
+}
+
+.darker {
+    border-color: #ccc;
+    background-color: #00316b;
+}
+
+.container::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.container img {
+    float: left;
+    max-width: 60px;
+    width: 100%;
+    margin-right: 20px;
+    border-radius: 50%;
+}
+
+.container img.right {
+    float: right;
+    margin-left: 20px;
+    margin-right: 0;
+}
+
+.time-right {
+    float: right;
+    color: #aaa;
+}
+
+.time-left {
+    float: left;
+    color: #999;
+}
+
+.container p {
+    color: #ffffff;
+}
+
+h2.about{
+    padding-left: 10px;
+    /*color: #00316b;*/
+    color: #00316b;
+    text-align: center;
+}
+
+/*end of addam's css*/
+
+@media (min-width: 600px) {
+    #loginBtn {
+        float: right;
+    }
+}
+
+ #loginBtn{
+    /*float: right;*/
+    /*position:fixed;
+    top:0px;
+    right:0px;
+    width:100px;*/
+ }
+ 
+ #container{
+     width: 100%;
+     height: 80%;
+ }
+ 
+ #loginform{
+     border-color:#00316b;
+     padding: 20px;
+     border-style: solid;
+ }
+ 
+ #createForm{
+     padding: 20px;
+ }
+ 
+ #space1{
+     width:100%;
+     height:80px;
+ }
+ 
+ /*#leftSpace{
+     width:20%;
+     height:220px;
+     background-color:grey;
+     float:left;
+ }*/
+ 
+ #left{
+     width:50%;
+     height:340px;
+     text-align: left;
+     float:left;
+ }
+ 
+/* #rightSpace{
+     width:20%;
+     height:220px;
+     background-color:grey;
+     float:right;
+ }*/
+ 
+ #right{
+     width:50%;
+     height:340px;
+     /*background-color:grey;*/
+     text-align:center;
+     float:right;
+ }
+ 
+ 
+ #loginError{
+     display:none;
+ }
+ 
+/* dialog{
+     position: relative;
+     float:left;
+ }*/
+ 
+ 
+ #loginHolder{
+     float:left;
+     height: 200px;
+     padding: 10px;
+     background-color: white;
+ }
+ 
+ #createHolder{
+     float:right;
+     
+ }
+ 
+ #sliderRow {
+     width: 100%;
+ }
+ 
+ #sliderRow p {
+     margin: 0;
+ }
+ 
+ #sliderRow input {
+     margin: 0;
+ }
+ 
+ output {
+    position: absolute;
+    background-image: linear-gradient(top, #444444, #999999);
+    width: 40px;
+    height: 30px;
+    text-align: center;
+    color: white;
+    border-radius:10px;
+    display:inline-block;
+    font:bold 50px/30px Georgia;
+    bottom: 175px;
+    left:0;
+    margin-left:-1%;
+ }
+ output:after {
+     content:"";
+     position: absolute;
+     width:0;
+     height:0;
+     border-top: 10px solid #999999;
+     border-left: 5px solid transparent;
+     border-right: 5px solid transparent;
+     top: 100%;
+     left: 50%;
+     margin-left: -5px;
+     margin-top: -1px;
+ }
+ 
+ 
+ 
+ .mainBody {
+     width: 100%;
+     height: 500px;
+ }
+ 
+.col {
+     width: 33%;
+     float: left;
+     height: 100%;
+ }
+ 
+ #createCol {
+     width: 33%;
+ }
+ #createHolder {
+     float: right;
+ }
+ 
+ #logodiv {
+     border: 1px #4b32bc;
+ }
+ 
+ 
+ /*Results Page CSS */
+ #results1{
+      border: 2px solid #00316b;
+ }
+ 
+ /*Megan's Contact Page CSS */
+
+#contactUs{
+    height: 100%;
+    width: 30%;
+    background-color: silver;
+    float: right;
+}
+h4{
+    text-align: center;
+    text-decoration: underline;
+}
+h5{
+    text-decoration: underline;
+    color:#4b32bc;
+}
+h6{
+    padding-left: 12px;
+}
+address{
+    text-align: center;
+}
+
+#address{
+    
+}
+
+#aboutContact{
+    font-family: 'Gloria Hallelujah', cursive;
+}
+
+#form{
+    height:30%;
+    width:60%;
+    float: left;
+
+}
+        
+#contact {
+    width: 350px;
+    padding: 20px 30px;
+    background: #EDEDED;
+    padding: 20px;
+    border-radius: 8px;
+    /*font-family: Georgia, "Times New Roman", Times, serif;*/
+
+}
+
+#submit{
+    position: relative;
+    display: block;
+    padding: 19px 39px 18px 39px;
+    color: #FFF;
+    margin: 0 auto;
+    background: #00316b;
+    font-size: 18px;
+    text-align: center;
+    font-style: normal;
+    width: 100%;
+    border: 1px solid #00316b;
+    border-width: 1px 1px 3px;
+    margin-bottom: 10px;
+}
+
+#submit:hover{
+    background-color: #e91e63;
+}
+
+
+#signOutBtn{
+    width: 80px;
+    height:40px;
+    background-color: #00316b;
+    color: #FFF;
+    font-family: 'Hi Melody';
+}
+
+#signOutBtn:hover{
+    background-color: #e91e63;  
+}
+
+#logoutBtn{
+    float:right;
+    width: 60px;
+    height:40px;
+    padding-top: 10px;
+    margin-right: 40px;
+    /*padding-right:50px;*/
+    
+}
+
+
+
+
+
+
+
+
+/*adams css*/
+
+.center {
+    width: 80%;
+    margin: auto;
+    min-height: 250px;
+}
+
+.center:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.about {
+    float: left;
+    width: 20%;
+    padding: 8.5px;
+    height: 250px;
+}
+
+.about2 {
+    width: 70%;
+    padding: 8.5px;
+    height: 30%;
+    padding-left: 30%;
+
+
+}
+
+.aboutLogo {
+    margin: auto;
+    width: 20%;
+    height: 300px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+
+}
+
+.container {
+    border: 2px solid #dedede;
+    background-color: #e91e63;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+    height: 9%;
+    width: 25%;
+
+}
+
+.darker {
+    border-color: #ccc;
+    background-color: #00316b;
+}
+
+.container::after {
+    content: "";
+    clear: both;
+    display: table;
+
+
+}
+
+.container img {
+    float: left;
+    max-width: 60px;
+    width: 100%;
+    margin-right: 20px;
+    border-radius: 50%;
+}
+
+.container img.right {
+    float: right;
+    margin-left: 20px;
+    margin-right: 0;
+}
+
+.time-right {
+    float: right;
+    color: #aaa;
+}
+
+.time-left {
+    float: left;
+    color: #999;
+}
+
+.container p {
+    color: #ffffff;
+}
+
+.imgabout {
+    border: solid;
+    border-color: #00316b;
+}
+
+.innerabout {
+    border: solid;
+    border-color: #00316b;
+
+
+}
+
+/*End adams css*/

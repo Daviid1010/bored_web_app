@@ -1,0 +1,228 @@
+body {
+	margin:0;
+	background-color: #f0f8ff;
+	font-family: 'Hi Melody';
+}
+
+/*
+List of colors: 
+-Azure: #f0f8ff
+*/
+
+#topper {
+	overflow:auto;
+	overflow:hidden;
+}
+
+#login{
+    position: relative;
+    display: block;
+    padding: 18px 39px 18px 39px;
+    color: #FFF;
+    margin: 0 auto;
+    background: #94618E;
+    font-size: 18px;
+    text-align: center;
+    font-style: normal;
+    width: 100%;
+    border: 1px solid #00316b;
+    border-width: 1px 1px 1px;
+    margin-bottom: 10px;
+}
+
+#createBtn{
+    position: relative;
+    display: block;
+    padding: 18px 39px 18px 39px;
+    color: #FFF;
+    margin: 0 auto;
+    background: #94618E;
+    font-size: 28px;
+    text-align: center;
+    font-style: normal;
+    width: 100%;
+    border: 1px solid #00316b;
+    border-width: 1px 1px 1px;
+    margin-bottom: 10px;
+}
+
+#createBtn:hover{
+    background-color: #e91e63;
+}
+
+#login:hover{
+    background-color: #e91e63;
+}
+
+#signIn {
+	float:left;
+	width: 40%;
+	overflow: hidden;
+	background: #98AFC7;
+}
+
+#bigLogo {
+	float: left;
+	width: 100%;
+}
+
+#create {
+	float:right;
+	width: 40%;
+	overflow: hidden;
+	background: #98AFC7;
+}
+
+#logo {
+	display:block;
+	margin:0 auto;
+	width: 20%;
+}
+
+@media (max-width: 600px) {
+	#signIn {
+		width: 100%;
+	}
+	#create {
+		width: 100%;
+	}
+}
+
+
+/* Add a black background color to the top navigation */
+.topnav {
+    /*background-color: #00316b; 4b32bc*/
+    background-color:#94618E;
+    overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 16px 20px;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: #e91e63;   
+    color: #fff;
+}
+
+/* Add an active class to highlight the current page */
+.active {
+    /*background-color: #e91e63;*/
+    background-color:#00316b;
+    color: #fff;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+    display: none;
+}
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+  .topnavresponsive {position: relative;}
+  .topnavresponsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnavresponsive a {
+    float: none;
+    display: block;
+    text-align: left;
+    padding: 14px 16px;
+    font-size: 20px;
+    text-decoration: none;
+  }
+  .dropmenu {
+      background-color: #00316b;
+      color: white;
+  }
+  .dropmenu:hover {
+      background-color: #e91e63;
+  }
+  .wrap{
+    float:left;
+    margin:auto;
+    margin-bottom:50px;
+    margin-top:10px;
+    width:30%;
+  }
+ .chat{
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 0 20px;
+    /*h:*/
+ }
+ 
+
+}
+
+.form-style-5{
+    width: 350px;
+    padding: 20px 30px;
+    /*margin: 20px auto;*/
+    padding: 20px;
+    background: #f4f7f8;
+    border-radius: 8px;
+}
+
+
+.form-style-5 fieldset{
+    border: none;
+}
+
+.form-style-5 input[type="text"],
+.form-style-5 input[type="password"],
+.form-style-5 select {
+    /*font-family: Georgia, "Times New Roman", Times, serif;*/
+    background: rgba(255,255,255,.1);
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    margin: 0;
+    outline: 0;
+    padding: 7px;
+    width: 100%;
+    box-sizing: border-box; 
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box; 
+    background-color: #e8eeef;
+    color:#8a97a0;
+    -webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+    margin-bottom: 30px;
+    
+}
+.form-style-5 input[type="text"]:focus,
+.form-style-5 select:focus{
+    background: #d2d9dd;
+}
+.form-style-5 select{
+    -webkit-appearance: menulist-button;
+    height:35px;
+}
+
+
+.form-style-5 input[type="submit"]:hover,
+.form-style-5 input[type="button"]:hover
+{
+    background: red;
+}
+

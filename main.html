@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+     <meta charset="UTF-8"> 
+    <title>
+        Bored.ie
+    </title>
+    <link rel="icon" href="images/favicon.ico"/>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Hi+Melody" rel="stylesheet">
+    <link rel="stylesheet" href="css/davy.css" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet"></head>
+
+<body>
+    <!-- This is the new code for the navbar, instead of using a nav tag I used my own css and javascript, the old code is commentted out above-->
+    <div class="topnav" id="myTopnav">
+        <a href="main.html" class="active">Home</a>
+        <a href="contact.html" class="dropmenu">Contact</a>
+        <a href="about.html" class="dropmenu">About</a>
+        <div id="logoutBtn">
+            <input type="button" id="signOutBtn" class="dropmenu" onclick="signOut();" value="Sign Out"/>
+            <!--<button id="signOutBtn" class="dropmenu" onclick="signOut();">Sign Out<!--Users name</button>-->
+        </div>
+        
+        <!--<a href="index.html" id="loginBtn" name="loginBtn" class="dropmenu"  style="float:right" onclick="signOut()">Sign Out</a>--> <!-- Make into button & change CSS to make it suit the nav bar-->
+        <a href="javascript:void(0)" class="icon" onclick="myFunction()">&#9776;</a>
+    </div>
+
+    <br/>
+    <!--This section is the search engine with an input tag type slider that will allow
+     the user to select a price, there are also two dropdown boxes which will allow the user to choose
+     what type of event and what location they wish to search
+     To be added: functionality in the search engine to zoom to each city on search,
+     link with firebase database-->
+    <h1 id="mainHead">Welcome to Bored.ie</h1>
+    <div id="sliders">
+        
+        <h2>About Us</h2>
+        <p id="about">Bored.ie is a recently formed company that is aimed to meet the needs of students, in relation to past-times. The Company was created in order to give you a highly useful web application that you can interact with.
+This web-application allows you to input your preferred budget, your preferred event type and location and our web-app will take your specified requirements and show you all the events that suit you!
+Assisting you in the dificult decision making of what to do and where to go, all while staying within your price-range!</p>
+        
+        <h2>Search Engine</h2>
+        <h3>Price</h3>
+            <input type="range" min="1" max="100" value="1" class="slider" id="myRange" data-show-value="true" onchange="updateTextInput(this.value);"/>
+            <input type="number" id="textInput" value="0">
+            <!-- <output for="myRange" onforminput="value = myRange.valueAsNumber;"></output> -->
+        <div id="selectrow">
+            <h3>Event Type</h3>
+                        <select id="eventSelection">
+                            <option value="all">All</option>
+                            <option value="sport">Sport</option>
+                            <option value="music">Music</option>
+                            <option value="art">Art</option>
+                            <option value="nightlife">Night Life</option>
+                            <option value="entertainment">Entertainment</option>
+                            <option value="recreational">Recreation</option>
+                        </select>
+            <h3>City</h3>
+                        <select id="citySelection">
+                            <option value="dublin">Dublin</option>
+                            <option value="cork">Cork</option>
+                            <option value="waterford">Waterford</option>
+                        </select>
+        </div>
+      <input type="button" name="submit" value="Submit" id="submitBtn" onclick="searchMap();"/>
+      <!--<input type="button" name="search" value="Search" id="searchBtn"/>-->
+    </div>
+    <div id='map'>
+        <!--<iframe width="100%" height="100%" scrolling="no" frameborder="no" src="https://fusiontables.google.com/embedviz?q=select+col2+from+1y0FtN7KitznJS-6bFPNAh2cf8D4qsB0x6WMOvHgI&amp;viz=MAP&amp;h=false&amp;lat=53.345046634229824&amp;lng=-6.286929061279352&amp;t=1&amp;z=13&amp;l=col2&amp;y=2&amp;tmplt=2&amp;hml=GEOCODABLE"></iframe> -->
+        
+    </div>
+
+    
+    <!--Link to Firebase-->
+    <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
+    <!--<script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyB8j_KBw9G3DyTzsz1mET9PZ8-e1Tp0yOY",
+        authDomain: "boredwebapplication.firebaseapp.com",
+        databaseURL: "https://boredwebapplication.firebaseio.com",
+        projectId: "boredwebapplication",
+        storageBucket: "boredwebapplication.appspot.com",
+        messagingSenderId: "186723770162"
+      };
+      firebase.initializeApp(config);
+    </script>-->
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <script>
+      function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 53.350140, lng: -6.266155},
+          zoom: 12
+        });
+
+        var layer = new google.maps.FusionTablesLayer({
+          query: {
+            select: 'title',
+            from: '1y0FtN7KitznJS-6bFPNAh2cf8D4qsB0x6WMOvHgI',
+          }
+        });
+        layer.setMap(map);
+      }
+	  /*
+	  Dublin location: lat: 53.350140, lng: -6.266155
+	  Cork Location: lat: 51.903614, lng: -8.468399
+	  Waterford Location: lat: 52.2593, lng: -7.1101
+	  */
+	  
+	      
+	  
+	  function searchMap() {
+	      
+	    var map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 53.350140, lng: -6.266155},
+          zoom: 12
+        });
+        
+        
+	      
+	      var price = parseInt(document.getElementById("textInput").value);
+		  var t = document.getElementById("eventSelection");
+	      var type = "'"+t.options[t.selectedIndex].text+"'";
+		  
+		  var c = document.getElementById("citySelection");
+	      var city = "'"+c.options[c.selectedIndex].value+"'";
+	      
+	      var param = "cost < "+price+" AND event_type ="+type+" AND city ="+city;
+	      
+	      console.log(price);
+	      console.log(type);
+	      console.log(city);
+	      
+	      var layer = new google.maps.FusionTablesLayer({
+	          query: {
+	              select: 'title',
+	              from: '1y0FtN7KitznJS-6bFPNAh2cf8D4qsB0x6WMOvHgI',
+	              where: param
+	          }
+	      });
+	      
+	      if(city=="'cork'") {
+	          map = new google.maps.Map(document.getElementById('map'), {
+              center: {lat: 51.903614, lng: -8.468399},
+              zoom: 12
+                });
+	      } else if(city=="'waterford'") {
+	          map = new google.maps.Map(document.getElementById('map'), {
+              center: {lat: 52.2593, lng: -7.1101},
+              zoom: 12
+                });
+	      }else{
+	          map = new google.maps.Map(document.getElementById('map'), {
+              center: {lat: 53.350140, lng: -6.266155},
+              zoom: 12
+                });
+	      }
+	      
+	      layer.setMap(map);
+	  }
+    </script>
+    
+    
+    
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDaH2uNRob3OutFAOnKDDiNZK3zGTnjdhE&callback=initMap">
+    </script>
+    
+    <!-- Information on event from Map -->
+    
+    
+
+</body>
+
+
+
+</html>
