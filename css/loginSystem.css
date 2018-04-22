@@ -126,7 +126,7 @@
 }
 
 /*Media Query for Forms*/
-@media (max-width: 750px) {
+@media (max-width: 1080px) {
     #createCol{
         width:100%;
         float: left;
