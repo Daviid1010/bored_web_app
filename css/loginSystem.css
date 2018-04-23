@@ -6,14 +6,13 @@
     padding: 19px 39px 18px 39px;
     color: #FFF;
     margin: 0 auto;
-    background: #00316b;
+    background: #94618E;
     font-size: 18px;
     text-align: center;
     /*font-style: normal; */
     width: 100%;
-    border: 1px solid #00316b;
-    border-width: 1px 1px 3px;
-    margin-bottom: 10px;
+    border: 1px solid #94618E;
+    /*margin-bottom: 10px;*/
 }
 
 #login:hover{
@@ -54,13 +53,12 @@
     padding: 19px 39px 18px 39px;
     color: #FFF;
     margin: 0 auto;
-    background: #00316b;
+    background: #94618E;;
     font-size: 18px;
     text-align: center;
     font-style: normal;
     width: 100%;
-    border: 1px solid #00316b;
-    border-width: 1px 1px 3px;
+    border: 1px solid #94618E;;
     margin-bottom: 10px;
 }
 
@@ -68,15 +66,20 @@
     background-color: #e91e63;
 }
 
+#formMessage{
+    font-size:20px;
+}
 
 .form-style-5{
     width: 350px;
     padding: 20px 30px;
-    background-color: #efbbff;
+    background-color: #98AFC7;
     padding: 20px;
     border-radius: 8px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     /*font-family: Georgia, "Times New Roman", Times, serif;*/
 }
+
 
 
 .form-style-5 fieldset{

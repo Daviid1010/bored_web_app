@@ -14,38 +14,6 @@ List of colors:
 	overflow:hidden;
 }
 
-#login{
-    position: relative;
-    display: block;
-    padding: 18px 39px 18px 39px;
-    color: #FFF;
-    margin: 0 auto;
-    background: #94618E;
-    font-size: 18px;
-    text-align: center;
-    font-style: normal;
-    width: 100%;
-    border: 1px solid #00316b;
-    border-width: 1px 1px 1px;
-    margin-bottom: 10px;
-}
-
-#createBtn{
-    position: relative;
-    display: block;
-    padding: 18px 39px 18px 39px;
-    color: #FFF;
-    margin: 0 auto;
-    background: #94618E;
-    font-size: 28px;
-    text-align: center;
-    font-style: normal;
-    width: 100%;
-    border: 1px solid #00316b;
-    border-width: 1px 1px 1px;
-    margin-bottom: 10px;
-}
-
 #createBtn:hover{
     background-color: #e91e63;
 }
@@ -59,6 +27,7 @@ List of colors:
 	width: 40%;
 	overflow: hidden;
 	background: #98AFC7;
+	margin-left: 10px;
 }
 
 #bigLogo {
@@ -71,6 +40,8 @@ List of colors:
 	width: 40%;
 	overflow: hidden;
 	background: #98AFC7;
+	padding-bottom: 0px;
+	margin-right: 10px;
 }
 
 #logo {
@@ -79,12 +50,34 @@ List of colors:
 	width: 20%;
 }
 
+.bar {
+    display: none;
+}
+
+
 @media (max-width: 600px) {
 	#signIn {
 		width: 100%;
+		margin-bottom: 20px;
+		margin-left: 0px;
 	}
 	#create {
 		width: 100%;
+		margin-top: 20px;
+		margin-right: 0px;
+	}
+	.bar {
+	    display: inline-block;
+	    height: 5px;
+	    background-color: #94618E;
+	    width: 100%;
+	    margin: 0 auto;
+	}
+	.under {
+	    height: 50px;
+	}
+	#logo {
+	    width: 40%;
 	}
 }
 
@@ -181,6 +174,7 @@ List of colors:
     padding: 20px;
     background: #f4f7f8;
     border-radius: 8px;
+    
 }
 
 
@@ -190,6 +184,7 @@ List of colors:
 
 .form-style-5 input[type="text"],
 .form-style-5 input[type="password"],
+.form-style-5 input[type="textarea"],
 .form-style-5 select {
     /*font-family: Georgia, "Times New Roman", Times, serif;*/
     background: rgba(255,255,255,.1);
@@ -203,7 +198,7 @@ List of colors:
     box-sizing: border-box; 
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box; 
-    background-color: #e8eeef;
+    background-color: #f8f8f8;
     color:#8a97a0;
     -webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
     box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
@@ -225,4 +220,34 @@ List of colors:
 {
     background: red;
 }
+
+#aboutSection {
+    float: left;
+    height: 200px;
+    width: 100%;
+}
+
+#textInput {
+    margin-left: 10px;
+}
+
+.socialSpace {
+    float: left;
+    width: 33.3333333%;
+    height: 45px;
+    align:center;
+}
+
+.socialSpace img {
+    float: left;
+    height: 45px;
+    width: 45px;
+}
+
+#icons {
+    width:35%;
+    height:100%;
+    margin: 0 auto;
+}
+
 

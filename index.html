@@ -3,8 +3,9 @@
 <html>
 
 <head>
-
-     <meta charset="UTF-8"> 
+    <meta charset="UTF-8">
+    <meta name="description" content="This is a bugdet event search engine for Irish college/university students in Irish university cities. Provides a selection of activities/events to do within a set budget and event type.">
+    <meta name="keywords" content="bored, student, events, event, sport, art, culture, night-out, sesh, match, I'm-bored, student-events, student-budget, budget-event, dublin, wateford, cork">
     <title>
         Login
     </title>
@@ -13,24 +14,12 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/loginSystem.css">
     <link rel="stylesheet" href="css/davy.css" type="text/css" />
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Hi+Melody" rel="stylesheet">
     
 </head>
 
 <body>
-	<!-- Navbar
-    <div class="topnav" id="myTopnav">
-        <a href="main.html">Home</a>
-        <a href="contact.html" class="dropmenu">Contact</a>
-        <a href="about.html" class="dropmenu">About</a>
-        <a href="index.html" class="dropmenu" id="loginBtn" style="float:right">Login</a>
-        <a href="javascript:void(0)" class="icon" onclick="myFunction()">&#9776;</a>
-    </div>  -->
-	
-	
 	<div id="topper">
-	
 		<div id="bigLogo">
 			<img src="images/Logo Transparent.png" alt="Bored.ie" id="logo"/>
 		 </div>
@@ -38,67 +27,49 @@
 		<h1>Welcome to Bored.ie</h1>
 		<!-- Sign In Form -->
 		<div id="signIn" class="form-style-5">
-			<p id="loginMessage">You are not logged in - Log in!</p>
-			<form id="loginForm"> <!-- action="main.html" put within the form tag -->
+			<form class="loginForm">
 			   <fieldset>
 				  <h2>Sign In</h2>
-				  <!--<p id=loginError></p>-->
+				  <p class"formMessage">You are not logged in - Log in!</p>
 				  Email:<br>
 				  <input type="text" id="loginEmail" placeholder="~Your Email~"/><br>
 				  Password:<br>
 				  <input type="password" id="loginPassword" placeholder="~Your Password~"/><br>
-				  <button type="button" id="login">Sign In</button> <!--onclick="signIn();-->
-				  <!--formaction="main.html"-->
+				  <button type="button" id="login">Sign In</button>
 			  </fieldset>
 			</form>
 		 </div>
 		 
-
+		<div class="bar"></div>
 
 		 <!-- Create User Form -->
 		<div id="create" class="form-style-5">
-			<p id="createMessage"> You don't have an Account -  Create One</p>
-			<form id="createForm"> <!-- action="main.html" put within the form tag -->
+			<form class="createForm">
 			   <fieldset>
 				  <h2>Create an Account</h2>
-				   <!--<p id=createError></p>-->
+				  <p class"createMessage"> You don't have an Account -  Create One</p>
 					  Email:<br>
 					  <input type="text" id="createEmail" placeholder="~Your Email~"><br>
 					  Password:<br>
 					  <input type="password" id="createPassword" placeholder="~Your Password~"><br>
 					  <button type="button" id="createBtn">Create</button>
-				  <!--formaction="main.html"-->
 			  </fieldset>
 			</form>
 		</div>
-	</div>   
-
-<!--<input type="button" name="signOut" value="Sign Out" onclick="signOut();"/>-->       
+	</div>
+	
+	<div class="under"></div>
+	
     
     <!--Link to Firebase-->
     <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
-<!--
-<script>
-   // Initialize Firebase
-   var config = {
-    apiKey: "AIzaSyB8j_KBw9G3DyTzsz1mET9PZ8-e1Tp0yOY",
-    authDomain: "boredwebapplication.firebaseapp.com",
-    databaseURL: "https://boredwebapplication.firebaseio.com",
-    projectId: "boredwebapplication",
-    storageBucket: "boredwebapplication.appspot.com",
-    messagingSenderId: "186723770162"
-    };
-    firebase.initializeApp(config);
-    </script> 
-        -->
-    
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-   <script type="text/javascript" src="js/login.js"></script> 
-   <!--<script type="text/javascript" src="script.js"></script>-->
+	<script type="text/javascript" src="js/login.js"></script> 
+   
+    <footer class="foot">
+        <small>&copy; Copyright 2018, Bored.ie</small>
+    </footer>
     
-   <!-- if( createBtn.clicked == true){
-        dataBase.push({ 'First Name': document.getElementById('createFname').value,  'Last Name': document.getElementById('createLname').value, 'Email': document.getElementById('createEmail').value, 'password': document.getElementById('createPassword').value });
-    } -->
 </body>
 
 

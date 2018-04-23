@@ -17,74 +17,71 @@
 
 <body>
     <div class="topnav" id="myTopnav">
-        <a href="main.html" class="active">Home</a>
-        <a href="contact.html" class="dropmenu">Contact</a>
+        <a href="main.html">Home</a>
+        <a href="contact.html" class="dropmenu, active">Contact</a>
         <a href="about.html" class="dropmenu">About</a>
-        <a href="index.html" class="dropmenu" id="loginBtn">Login</a>
+        <a onclick="signOut();" class="dropmenu" id="loginBtn">Sign Out</a>
         <a href="javascript:void(0)" class="icon" onclick="myFunction()">&#9776;</a>
     </div>
-    
-    <h1> Contact Us </h1>
-    <div id = "contactUs">
-        <h4>Want to get in Touch?</h4>
-        <br />
-        <strong>Email:</strong><a href="mailto:boredstudents101@gmail.com">boredstudents101@gmail.com</a><br />
-        <br />
-        <abbr title="Phone"><strong>Ph:</strong> 01- 835 6000</abbr>
-        <br />
-        <br />
-        <p id="address">Address:</p><br />
-        <address>
-            Unit A1-4,<br />
-            Greenog Road, <br />
-            Rathcoole, <br />
-            Co. Dublin <br />
-        </address>
-        <br />
-        <br />
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2385.526233634167!2d-6.4692258846390915!3d53.28010787996514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x486774228690c8c7%3A0x73dfa0c46426ddc8!2sGreenogue+Dr%2C+Rathcoole%2C+Co.+Dublin!5e0!3m2!1sen!2sie!4v1523827083305" width="100%" height="70%" frameborder="0" style="border:0" allowfullscreen></iframe>
-    </div>
+    <br>
     <div id="form">
-        <h2>Tell us what we're missing!</h2>
-        <p id="aboutContact"></p>If there is something you have always wanted to experience and you can't find it on I'mBored, let us know and we will try and add it to our site for you!<br/>
-        <br/>Reach out to us and we will respond to you as soon as we can!</p>
+	<h1>If we have missed anything please make sure to get in touch!</h1>
+		<br/>
+		<br/>
+		<br/>
+        		
+		<!-- Kellies php Form -->
+	  <div id="contact" class="form-style-5">
+		 <form id="contactForm"> <!-- action="main.html" put within the form tag -->
+		   <fieldset>
+			  <h2>Get In Touch</h2>
+			  Name:<br>
+			  <input type="text" name="name" id="userName" placeholder="~Your Name~"/><br>
+			  Email:<br>
+			  <input type="text" name="email" id="userEmail" placeholder="~Your Email~"/><br>
+			  Message:<br>
+			  <input type="textarea" name="message" id="userMessage" placeholder="~Your Message~"/><br>
+			 
+			  <button type="submit" id="submit">Submit</button>
+			  <!--formaction="main.html"-->
+		  </fieldset>
+		</form>
+	  </div>
+
+</div>
     
-    <!-- Kellies php Form -->
-  <div id="contact" class="form-style-5">
-     <form id="contactForm"> <!-- action="main.html" put within the form tag -->
-       <fieldset>
-          <h2>Get In Touch</h2>
-          <!--<p id=loginError></p>-->
-          Name:<br>
-          <input type="text" id="userName" placeholder="~Your Name~"/><br>
-          Email:<br>
-          <input type="text" id="userEmail" placeholder="~Your Email~"/><br>
-          Message:<br>
-          <input type="textarea" id="userMessage" placeholder="~Your Message~"/><br>
-          
-          <input type="button" id="submit" value="Submit" onclick="submitForm()"/>
-          
-          <!--<button type="button" id="submit" onclick="submitForm();">Submit</button>-->
-          <!--formaction="main.html"-->
-      </fieldset>
-    </form>
-  </div>
+	<div class="contactDetails" id="contactInfo">
+		<h1>Contact Us</h1>
+	
+         <address>
+			Unit A1-4, <br/>
+			Greenog Road, Rathcoole,<br/>
+			Co, Dublin<br />
+			<abbr title="Phone">Ph:</abbr>
+			01 8764552<br/>
+			boredstudents101@gmail.com
+		</address>
+		<br/>
+		<br/>
+		
+		<div id="contactMap">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2385.526233634167!2d-6.4692258846390915!3d53.28010787996514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x486774228690c8c7%3A0x73dfa0c46426ddc8!2sGreenogue+Dr%2C+Rathcoole%2C+Co.+Dublin!5e0!3m2!1sen!2sie!4v1523827083305" width="405px" height="280px" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+	</div> 
+    <div class="under"></div>
     
-    
-    
-    
-    </div>
-    
-    <!-- To be deleted once css is working in style.css page -->
-    
-    
-    
+
+    <footer class="foot">
+        <small>&copy; Copyright 2018, Bored.ie</small>
+    </footer>
+
+
     <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
     <script	src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="script.js"></script>
     
    
     
-    
 </body>
+
 </html>

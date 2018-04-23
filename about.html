@@ -1,14 +1,6 @@
 <!DOCTYPE htm>
 <html>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!--<style>
-    
-* {
-    box-sizing: border-box;
-}
-
-
-</style>-->
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1, iser-scalable=no" />
@@ -23,82 +15,83 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Hi+Melody" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
-</head>
-</head>
+
+
 
 <body>
     <!-- This is the new code for the navbar, instead of using a nav tag I used my own css and javascript, the old code is commentted out above-->
     <div class="topnav" id="myTopnav">
-        <!--<a href="main.html"><img id="logo" src="/images/Logo Transparent.png" alt="Logo">-->
         <a href="main.html" class="dropmenu">Home</a>
         <a href="contact.html" class="dropmenu">Contact</a>
         <a href="about.html" class="active">About</a>
         <a href="javascript:void(0)" class="icon" onclick="myFunction()">&#9776;</a>
-        <a href="index.html" class="dropmenu" style="float:right">Login</a>
-    </div>
-    <!--<div class="topnav" id="loginBtn">
-        <a href="login.html" class="dropmenu">Login</a>
-    </div>-->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    </head>
-
-
-    <h2 align="center">About Us</h2>
-    
-    <div class="about2">
-        <div class="imgabout">
-            <img src="/images/students.jpg" alt="Bored.ie">
-        </div>
+        <a onclick="signOut();" class="dropmenu" id="loginBtn">Sign Out</a>
     </div>
     
-    <div class="about2">
-        <div class="innerabout">
-            <p id="about">Bored.ie is a recently formed company that is aimed to meet the needs of students, in relation to past-times. The Company was created in order to give you a highly useful web application that you can interact with.</p>
-            <p id="about">This web-application allows you to input your preferred budget, your preferred event type and location and our web-app will take your specified requirements and show you all the events that suit you!</p>
-            <p id="about">Assisting you in the dificult decision making of what to do and where to go, all while staying within your price-range!</p>
+    <div class="about1">
+    <h1 align="center">About Us</h1>
+        <div class="imgabout" id="fitimage">
+            <img src="images/collage.jpg" alt="Bored.ie" id="students">
         </div>
     </div>
 
-    <div class="aboutLogo" style="align:center;">
-        <!--<h2><img src="/images/Logo Transparent.png" alt="Avatar" style="width:40%;"></h2>-->
+    <div class="about2">
+        <div class="containpar">
+        <div class="centerabout" id="parabout">
+            <p>Bored.ie is a recently formed company that is aimed to meet the needs of students, in relation to past-times. <br/>
+            The Company was created in order to give you a highly useful web application that you can interact with. <br/>
+            This web-application allows you to input your preferred budget, your preferred event type and location and our web-app will take your specified requirements and show you all the events that suit you! <br/>
+            Assisting you in the dificult decision making of what to do and where to go, all while staying within your price-range! <br/>
+            As students, we decided to make this site as we can all think of a time when we wanted something to do but couldn't find an event/activity within our student budget. <br/>
+            We decided to make Bored.ie as simple to use as possible and try to provide the best event/activity suggestion based on your inputted requirements! <br/>
+            We plan to develop Bored.ie even further so if we are missing any events/activities that you can think of, feel free to head on over to our contact page and fill out the form. <br/>
+            We hope you find Bored.ie as useful and as benficial as we think it will be!</p></div>
     </div>
+    </div>
+
+    <div class="about3" id="personal">
     <h2 align="center">Our Team</h2>
-    <div class="center">
-        <div class="about" style="background-color:#e9e8ed;">
-            <p><img src="/images/lauren.jpg" alt="Avatar" style="width:40%;"></p>
-            <h2>Lauren Bannon</h2>
-            <p>Chief Executive Officer (CEO)</p>
+    <div class="center" id="personal">
+        <div class="aboutteam" id="lauren" style="background-color:#e9e8ed;">
+            <p><img src="images/lauren.jpg" alt="Avatar" style="width:40%;"></p>
+            <h2 id="adjust">Lauren Bannon</h2>
+            <p id="disappear">(CEO)</p>
         </div>
-        <div class="about" style="background-color:#bbb;">
-            <p><img src="/images/megan.jpg" alt="Avatar" style="width:40%;"></p>
-            <h2>Megan Daly Peters</h2>
-            <p>Chief Financial Officer (CFO)</p>
+        <div class="aboutteam" id="megan" style="background-color:#bbb;">
+            <p><img src="images/megan.jpg" alt="Avatar" style="width:40%;"></p>
+            <h2 id="adjust">Megan Peters</h2>
+            <p id="disappear">(CFO)</p>
         </div>
-        <div class="about" style="background-color:#e9e8ed;">
-            <p><img src="/images/adam.jpg" alt="Avatar" style="width:40%;"></p>
-            <h2>Adam Freeman</h2>
-            <p>Chief Marketing Officer (CMO)</p>
+        <div class="aboutteam" id="adam" style="background-color:#e9e8ed;">
+            <p><img src="images/adam.jpg" alt="Avatar" style="width:40%;"></p>
+            <h2 id="adjust">Adam Freeman</h2>
+            <p id="disappear">(CMO)</p>
         </div>
-        <div class="about" style="background-color:#aaa;">
-            <p><img src="/images/kellie.jpg" alt="Avatar" style="width:40%;"></p>
-            <h2>Kellie Gregan</h2>
-            <p>Chief Operating Officer (COO)</p>
+        <div class="aboutteam" id="kellie" style="background-color:#aaa;">
+            <p><img src="images/kellie.jpg" alt="Avatar" style="width:40%;"></p>
+            <h2 id="adjust">Kellie Gregan</h2>
+            <p id="disappear">(COO)</p>
         </div>
-        <div class="about" style="background-color:#e9e8ed;">
-            <p><img src="/images/david.jpg" alt="Avatar" style="width:40%;"></p>
-            <h2>David Sheehy</h2>
-            <p>Chief Technical Officer (CTO)</p>
+        <div class="aboutteam" id="david" style="background-color:#e9e8ed;">
+            <p><img src="images/david.jpg" alt="Avatar" style="width:40%;"></p>
+            <h2 id="adjust">David Sheehy</h2>
+            <p id="disappear">(CTO)</p>
         </div>
     </div>
+    </div>
+    
+    
+    
+    <div class="under"> </div>
+    <footer class="foot">
+            <small>&copy; Copyright 2018, Bored.ie</small>
+    </footer>
+
 
 
     <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-    <!--<script type="text/javascript" src="script.js"></script> -->
-
+    <script type="text/javascript" src="script.js"></script>
 </body>
 
-
 </html>
-
-
